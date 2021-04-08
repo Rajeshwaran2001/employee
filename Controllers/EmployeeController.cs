@@ -65,8 +65,11 @@ namespace employee.Controllers
             {
                 return NoContent();
             }
+            employee.Name = model.Name;
             employee.City = model.City;
             employee.Email = model.Email;
+            employee.PhoneNo = model.PhoneNo;
+            employee.Address = model.Address;
             try
             {
                 _context.EmployeeTable.Update(employee);
